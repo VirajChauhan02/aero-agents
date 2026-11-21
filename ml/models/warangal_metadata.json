@@ -1,0 +1,175 @@
+{
+  "model_version": 5,
+  "city": "warangal",
+  "trained_at": "2026-11-21T07:49:28Z",
+  "model_type": "Horizon-calibrated XGBoost (reg:squarederror)",
+  "target_source": "Open-Meteo Air Quality API",
+  "aqi": {
+    "mae": 15.068,
+    "rmse": 22.46,
+    "r2": 0.4307,
+    "direction_accuracy_percent": 62.42,
+    "persistence_mae": 17.59,
+    "n": 16837
+  },
+  "pm25": {
+    "mae": 10.053,
+    "rmse": 13.977,
+    "r2": 0.3149,
+    "direction_accuracy_percent": 66.39,
+    "persistence_mae": 11.943,
+    "n": 16837
+  },
+  "weather_forecast_source": "Open-Meteo Weather Forecast API (no separate local weather models)",
+  "horizon_metrics": {
+    "1": {
+      "mae": 1.301,
+      "rmse": 2.633,
+      "r2": 0.9922,
+      "direction_accuracy_percent": 35.83,
+      "persistence_mae": 1.301,
+      "n": 2160
+    },
+    "6": {
+      "mae": 6.075,
+      "rmse": 9.68,
+      "r2": 0.8949,
+      "direction_accuracy_percent": 64.59,
+      "persistence_mae": 6.742,
+      "n": 2155
+    },
+    "12": {
+      "mae": 9.507,
+      "rmse": 13.02,
+      "r2": 0.8097,
+      "direction_accuracy_percent": 69.1,
+      "persistence_mae": 11.102,
+      "n": 2149
+    },
+    "24": {
+      "mae": 14.681,
+      "rmse": 19.114,
+      "r2": 0.588,
+      "direction_accuracy_percent": 67.15,
+      "persistence_mae": 16.779,
+      "n": 2137
+    },
+    "48": {
+      "mae": 20.893,
+      "rmse": 26.33,
+      "r2": 0.2085,
+      "direction_accuracy_percent": 66.35,
+      "persistence_mae": 23.811,
+      "n": 2113
+    },
+    "72": {
+      "mae": 23.24,
+      "rmse": 29.577,
+      "r2": 0.0018,
+      "direction_accuracy_percent": 66.54,
+      "persistence_mae": 26.268,
+      "n": 2089
+    },
+    "120": {
+      "mae": 23.237,
+      "rmse": 30.982,
+      "r2": -0.0832,
+      "direction_accuracy_percent": 62.67,
+      "persistence_mae": 27.758,
+      "n": 2041
+    },
+    "168": {
+      "mae": 23.019,
+      "rmse": 30.717,
+      "r2": -0.0686,
+      "direction_accuracy_percent": 67.84,
+      "persistence_mae": 28.739,
+      "n": 1993
+    }
+  },
+  "validation_method": "Chronological train/validation/test split; 90-day validation and test windows with 168-hour purge; no random split",
+  "train_pair_count": 554238,
+  "test_pair_count": 16837,
+  "feature_importance": [
+    {
+      "feature": "us_aqi_lag1",
+      "importance": 0.086999
+    },
+    {
+      "feature": "us_aqi_lag0",
+      "importance": 0.081857
+    },
+    {
+      "feature": "us_aqi_roll6_mean",
+      "importance": 0.048706
+    },
+    {
+      "feature": "surface_pressure_roll72_mean",
+      "importance": 0.031888
+    },
+    {
+      "feature": "surface_pressure_roll24_mean",
+      "importance": 0.031264
+    },
+    {
+      "feature": "us_aqi_lag2",
+      "importance": 0.028845
+    },
+    {
+      "feature": "pm2_5_roll72_mean",
+      "importance": 0.023753
+    },
+    {
+      "feature": "us_aqi_roll24_mean",
+      "importance": 0.022285
+    },
+    {
+      "feature": "cloud_cover_roll72_mean",
+      "importance": 0.021833
+    },
+    {
+      "feature": "year_day_cos",
+      "importance": 0.020038
+    },
+    {
+      "feature": "forecast_horizon_hours",
+      "importance": 0.019678
+    },
+    {
+      "feature": "cloud_cover_roll24_mean",
+      "importance": 0.018965
+    },
+    {
+      "feature": "temperature_2m_roll24_mean",
+      "importance": 0.01849
+    },
+    {
+      "feature": "us_aqi_lag12",
+      "importance": 0.017597
+    },
+    {
+      "feature": "us_aqi_lag6",
+      "importance": 0.016731
+    },
+    {
+      "feature": "us_aqi_lag3",
+      "importance": 0.016255
+    },
+    {
+      "feature": "cloud_cover_roll6_mean",
+      "importance": 0.015413
+    },
+    {
+      "feature": "us_aqi_change_6h",
+      "importance": 0.01448
+    },
+    {
+      "feature": "surface_pressure",
+      "importance": 0.014479
+    },
+    {
+      "feature": "relative_humidity_2m_roll72_mean",
+      "importance": 0.013825
+    }
+  ]
+}

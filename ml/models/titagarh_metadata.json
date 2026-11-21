@@ -1,0 +1,175 @@
+{
+  "model_version": 5,
+  "city": "titagarh",
+  "trained_at": "2026-11-21T09:25:26Z",
+  "model_type": "Horizon-calibrated XGBoost (reg:absoluteerror)",
+  "target_source": "Open-Meteo Air Quality API",
+  "aqi": {
+    "mae": 24.519,
+    "rmse": 37.323,
+    "r2": 0.497,
+    "direction_accuracy_percent": 65.69,
+    "persistence_mae": 29.013,
+    "n": 16837
+  },
+  "pm25": {
+    "mae": 21.044,
+    "rmse": 30.746,
+    "r2": 0.5148,
+    "direction_accuracy_percent": 68.31,
+    "persistence_mae": 25.837,
+    "n": 16837
+  },
+  "weather_forecast_source": "Open-Meteo Weather Forecast API (no separate local weather models)",
+  "horizon_metrics": {
+    "1": {
+      "mae": 2.716,
+      "rmse": 5.987,
+      "r2": 0.9872,
+      "direction_accuracy_percent": 48.89,
+      "persistence_mae": 2.817,
+      "n": 2160
+    },
+    "6": {
+      "mae": 10.589,
+      "rmse": 17.861,
+      "r2": 0.8864,
+      "direction_accuracy_percent": 66.36,
+      "persistence_mae": 13.247,
+      "n": 2155
+    },
+    "12": {
+      "mae": 13.815,
+      "rmse": 21.246,
+      "r2": 0.8391,
+      "direction_accuracy_percent": 70.92,
+      "persistence_mae": 17.687,
+      "n": 2149
+    },
+    "24": {
+      "mae": 18.722,
+      "rmse": 26.777,
+      "r2": 0.7433,
+      "direction_accuracy_percent": 67.95,
+      "persistence_mae": 21.432,
+      "n": 2137
+    },
+    "48": {
+      "mae": 29.746,
+      "rmse": 39.539,
+      "r2": 0.432,
+      "direction_accuracy_percent": 66.45,
+      "persistence_mae": 34.873,
+      "n": 2113
+    },
+    "72": {
+      "mae": 38.053,
+      "rmse": 48.915,
+      "r2": 0.1149,
+      "direction_accuracy_percent": 67.98,
+      "persistence_mae": 44.087,
+      "n": 2089
+    },
+    "120": {
+      "mae": 43.657,
+      "rmse": 55.185,
+      "r2": -0.1232,
+      "direction_accuracy_percent": 68.99,
+      "persistence_mae": 50.407,
+      "n": 2041
+    },
+    "168": {
+      "mae": 41.642,
+      "rmse": 53.335,
+      "r2": -0.0338,
+      "direction_accuracy_percent": 68.54,
+      "persistence_mae": 50.873,
+      "n": 1993
+    }
+  },
+  "validation_method": "Chronological train/validation/test split; 90-day validation and test windows with 168-hour purge; no random split",
+  "train_pair_count": 554238,
+  "test_pair_count": 16837,
+  "feature_importance": [
+    {
+      "feature": "surface_pressure",
+      "importance": 0.056231
+    },
+    {
+      "feature": "us_aqi_lag1",
+      "importance": 0.046429
+    },
+    {
+      "feature": "us_aqi_lag2",
+      "importance": 0.038615
+    },
+    {
+      "feature": "pm2_5_lag24",
+      "importance": 0.037411
+    },
+    {
+      "feature": "us_aqi_roll6_mean",
+      "importance": 0.036326
+    },
+    {
+      "feature": "us_aqi_trend_24h_72h",
+      "importance": 0.031069
+    },
+    {
+      "feature": "us_aqi_lag3",
+      "importance": 0.025396
+    },
+    {
+      "feature": "year_day_cos",
+      "importance": 0.024454
+    },
+    {
+      "feature": "us_aqi_change_6h",
+      "importance": 0.023517
+    },
+    {
+      "feature": "us_aqi_lag0",
+      "importance": 0.022356
+    },
+    {
+      "feature": "wind_speed_10m_roll72_mean",
+      "importance": 0.0214
+    },
+    {
+      "feature": "surface_pressure_roll6_mean",
+      "importance": 0.020985
+    },
+    {
+      "feature": "surface_pressure_roll24_mean",
+      "importance": 0.020087
+    },
+    {
+      "feature": "wind_speed_10m_roll24_mean",
+      "importance": 0.019099
+    },
+    {
+      "feature": "forecast_horizon_hours",
+      "importance": 0.018842
+    },
+    {
+      "feature": "surface_pressure_roll72_mean",
+      "importance": 0.018619
+    },
+    {
+      "feature": "us_aqi_lag6",
+      "importance": 0.017352
+    },
+    {
+      "feature": "pm2_5_roll72_mean",
+      "importance": 0.016134
+    },
+    {
+      "feature": "us_aqi_roll24_mean",
+      "importance": 0.016133
+    },
+    {
+      "feature": "pm2_5_lag6",
+      "importance": 0.015706
+    }
+  ]
+}

@@ -1,0 +1,175 @@
+{
+  "model_version": 5,
+  "city": "vijayawada",
+  "trained_at": "2026-11-21T08:09:00Z",
+  "model_type": "Horizon-calibrated XGBoost (reg:absoluteerror)",
+  "target_source": "Open-Meteo Air Quality API",
+  "aqi": {
+    "mae": 17.037,
+    "rmse": 25.353,
+    "r2": 0.5013,
+    "direction_accuracy_percent": 64.6,
+    "persistence_mae": 20.774,
+    "n": 16837
+  },
+  "pm25": {
+    "mae": 11.571,
+    "rmse": 16.345,
+    "r2": 0.4247,
+    "direction_accuracy_percent": 70.04,
+    "persistence_mae": 14.414,
+    "n": 16837
+  },
+  "weather_forecast_source": "Open-Meteo Weather Forecast API (no separate local weather models)",
+  "horizon_metrics": {
+    "1": {
+      "mae": 1.125,
+      "rmse": 1.845,
+      "r2": 0.9973,
+      "direction_accuracy_percent": 35.37,
+      "persistence_mae": 1.125,
+      "n": 2160
+    },
+    "6": {
+      "mae": 5.01,
+      "rmse": 7.075,
+      "r2": 0.961,
+      "direction_accuracy_percent": 70.72,
+      "persistence_mae": 6.128,
+      "n": 2155
+    },
+    "12": {
+      "mae": 8.845,
+      "rmse": 11.829,
+      "r2": 0.8912,
+      "direction_accuracy_percent": 73.71,
+      "persistence_mae": 11.047,
+      "n": 2149
+    },
+    "24": {
+      "mae": 16.182,
+      "rmse": 20.719,
+      "r2": 0.6663,
+      "direction_accuracy_percent": 69.07,
+      "persistence_mae": 18.852,
+      "n": 2137
+    },
+    "48": {
+      "mae": 24.252,
+      "rmse": 30.213,
+      "r2": 0.2873,
+      "direction_accuracy_percent": 67.16,
+      "persistence_mae": 27.752,
+      "n": 2113
+    },
+    "72": {
+      "mae": 26.724,
+      "rmse": 33.994,
+      "r2": 0.0975,
+      "direction_accuracy_percent": 66.87,
+      "persistence_mae": 31.799,
+      "n": 2089
+    },
+    "120": {
+      "mae": 26.577,
+      "rmse": 34.114,
+      "r2": 0.1043,
+      "direction_accuracy_percent": 65.36,
+      "persistence_mae": 33.708,
+      "n": 2041
+    },
+    "168": {
+      "mae": 29.463,
+      "rmse": 37.289,
+      "r2": -0.0653,
+      "direction_accuracy_percent": 69.19,
+      "persistence_mae": 38.255,
+      "n": 1993
+    }
+  },
+  "validation_method": "Chronological train/validation/test split; 90-day validation and test windows with 168-hour purge; no random split",
+  "train_pair_count": 554238,
+  "test_pair_count": 16837,
+  "feature_importance": [
+    {
+      "feature": "us_aqi_lag2",
+      "importance": 0.051939
+    },
+    {
+      "feature": "us_aqi_roll24_mean",
+      "importance": 0.049009
+    },
+    {
+      "feature": "us_aqi_lag1",
+      "importance": 0.045697
+    },
+    {
+      "feature": "us_aqi_lag6",
+      "importance": 0.042047
+    },
+    {
+      "feature": "us_aqi_lag3",
+      "importance": 0.041721
+    },
+    {
+      "feature": "temperature_2m_roll72_mean",
+      "importance": 0.035466
+    },
+    {
+      "feature": "us_aqi_roll6_mean",
+      "importance": 0.032264
+    },
+    {
+      "feature": "pm2_5_change_12h",
+      "importance": 0.032115
+    },
+    {
+      "feature": "pm2_5_lag24",
+      "importance": 0.025242
+    },
+    {
+      "feature": "surface_pressure_roll24_mean",
+      "importance": 0.023604
+    },
+    {
+      "feature": "year_day_cos",
+      "importance": 0.023273
+    },
+    {
+      "feature": "us_aqi_roll72_mean",
+      "importance": 0.022183
+    },
+    {
+      "feature": "pm2_5_trend_6h_24h",
+      "importance": 0.021449
+    },
+    {
+      "feature": "forecast_horizon_hours",
+      "importance": 0.021384
+    },
+    {
+      "feature": "surface_pressure_roll6_mean",
+      "importance": 0.018025
+    },
+    {
+      "feature": "surface_pressure_roll72_mean",
+      "importance": 0.017405
+    },
+    {
+      "feature": "us_aqi_lag0",
+      "importance": 0.016576
+    },
+    {
+      "feature": "temperature_2m_roll72_std",
+      "importance": 0.016447
+    },
+    {
+      "feature": "pm2_5_roll72_mean",
+      "importance": 0.016038
+    },
+    {
+      "feature": "relative_humidity_2m_roll72_mean",
+      "importance": 0.01596
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+AERO AGENTS - SELECTED PATCH
+
+This patch contains only three runtime integration files:
+- ml/predict.py
+- services/mlPredictionService.js
+- server.js
+
+Before applying, back up these three files from your existing project.
+Extract this ZIP into the EXISTING aero-agents-main folder and allow overwrite.
+Do NOT replace ml/models, ml/data, package.json, public/, or the whole project.
+Do NOT run model training yet. First start the server and test dashboard predictions.
+
+This patch switches weather forecast values to the Open-Meteo hourly forecast,
+while retaining the existing saved AQI and PM2.5 models.

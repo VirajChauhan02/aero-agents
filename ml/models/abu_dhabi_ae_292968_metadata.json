@@ -1,0 +1,175 @@
+{
+  "model_version": 5,
+  "city": "abu_dhabi_ae_292968",
+  "trained_at": "2026-11-20T18:47:16Z",
+  "model_type": "Horizon-calibrated XGBoost (reg:absoluteerror)",
+  "target_source": "Open-Meteo Air Quality API",
+  "aqi": {
+    "mae": 10.184,
+    "rmse": 14.602,
+    "r2": 0.639,
+    "direction_accuracy_percent": 64.07,
+    "persistence_mae": 12.033,
+    "n": 16837
+  },
+  "pm25": {
+    "mae": 7.381,
+    "rmse": 9.807,
+    "r2": 0.4559,
+    "direction_accuracy_percent": 67.74,
+    "persistence_mae": 8.952,
+    "n": 16837
+  },
+  "weather_forecast_source": "Open-Meteo Weather Forecast API (no separate local weather models)",
+  "horizon_metrics": {
+    "1": {
+      "mae": 0.942,
+      "rmse": 1.787,
+      "r2": 0.9948,
+      "direction_accuracy_percent": 40.05,
+      "persistence_mae": 0.949,
+      "n": 2160
+    },
+    "6": {
+      "mae": 4.241,
+      "rmse": 6.612,
+      "r2": 0.9289,
+      "direction_accuracy_percent": 60.28,
+      "persistence_mae": 4.909,
+      "n": 2155
+    },
+    "12": {
+      "mae": 7.188,
+      "rmse": 9.76,
+      "r2": 0.8444,
+      "direction_accuracy_percent": 63.89,
+      "persistence_mae": 8.234,
+      "n": 2149
+    },
+    "24": {
+      "mae": 10.891,
+      "rmse": 14.063,
+      "r2": 0.6738,
+      "direction_accuracy_percent": 67.66,
+      "persistence_mae": 12.774,
+      "n": 2137
+    },
+    "48": {
+      "mae": 13.476,
+      "rmse": 17.373,
+      "r2": 0.4906,
+      "direction_accuracy_percent": 70.75,
+      "persistence_mae": 16.379,
+      "n": 2113
+    },
+    "72": {
+      "mae": 14.145,
+      "rmse": 17.539,
+      "r2": 0.4739,
+      "direction_accuracy_percent": 67.54,
+      "persistence_mae": 17.142,
+      "n": 2089
+    },
+    "120": {
+      "mae": 14.884,
+      "rmse": 18.691,
+      "r2": 0.3702,
+      "direction_accuracy_percent": 73.05,
+      "persistence_mae": 17.966,
+      "n": 2041
+    },
+    "168": {
+      "mae": 16.647,
+      "rmse": 20.873,
+      "r2": 0.17,
+      "direction_accuracy_percent": 70.65,
+      "persistence_mae": 19.016,
+      "n": 1993
+    }
+  },
+  "validation_method": "Chronological train/validation/test split; 90-day validation and test windows with 168-hour purge; no random split",
+  "train_pair_count": 554238,
+  "test_pair_count": 16837,
+  "feature_importance": [
+    {
+      "feature": "us_aqi_lag1",
+      "importance": 0.079888
+    },
+    {
+      "feature": "us_aqi_trend_24h_72h",
+      "importance": 0.064338
+    },
+    {
+      "feature": "temperature_2m_roll72_mean",
+      "importance": 0.053436
+    },
+    {
+      "feature": "us_aqi_lag0",
+      "importance": 0.052269
+    },
+    {
+      "feature": "surface_pressure_roll24_mean",
+      "importance": 0.042002
+    },
+    {
+      "feature": "surface_pressure_roll6_mean",
+      "importance": 0.032597
+    },
+    {
+      "feature": "us_aqi_change_12h",
+      "importance": 0.032069
+    },
+    {
+      "feature": "year_day_cos",
+      "importance": 0.031243
+    },
+    {
+      "feature": "us_aqi_lag2",
+      "importance": 0.03085
+    },
+    {
+      "feature": "forecast_horizon_hours",
+      "importance": 0.027344
+    },
+    {
+      "feature": "surface_pressure_roll72_mean",
+      "importance": 0.025286
+    },
+    {
+      "feature": "temperature_2m_roll24_mean",
+      "importance": 0.021111
+    },
+    {
+      "feature": "us_aqi_roll6_mean",
+      "importance": 0.019796
+    },
+    {
+      "feature": "us_aqi_roll72_std",
+      "importance": 0.019445
+    },
+    {
+      "feature": "surface_pressure_lag168",
+      "importance": 0.017696
+    },
+    {
+      "feature": "year_day_sin",
+      "importance": 0.016583
+    },
+    {
+      "feature": "us_aqi_lag168",
+      "importance": 0.01542
+    },
+    {
+      "feature": "wind_speed_10m_roll24_mean",
+      "importance": 0.01483
+    },
+    {
+      "feature": "relative_humidity_2m_roll24_mean",
+      "importance": 0.014753
+    },
+    {
+      "feature": "us_aqi_roll24_std",
+      "importance": 0.014089
+    }
+  ]
+}

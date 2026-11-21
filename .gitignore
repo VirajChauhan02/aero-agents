@@ -1,0 +1,21 @@
+node_modules/
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+.vscode/
+
+# Local backups
+backup_auto_training_*/
+backup_before_merge/
+backup_india_aqi_*/
+backup_indian_patch/
+*.bak
+
+# Generated files
+ml/data/

@@ -1,0 +1,26 @@
+{
+  "name": "air-quality-weather",
+  "version": "1.0.0",
+  "description": "AQI and Weather Forecast Dashboard",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node --test"
+  },
+  "keywords": [
+    "air-quality",
+    "aqi",
+    "weather",
+    "machine-learning",
+    "ollama",
+    "meteorology"
+  ],
+  "author": "Air Quality and Weather Research Group",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  }
+}

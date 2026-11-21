@@ -1,0 +1,26 @@
+AERO AGENTS - CONSOLIDATED UPDATE
+
+What changed:
+1. Worldwide city search remains powered by Open-Meteo Geocoding.
+2. Cities with compatible saved AQI/PM2.5 models use their existing city-specific XGBoost models.
+3. Other supported locations automatically use Open-Meteo AQI forecast when valid provider data exists; no city-wise model training is required just to search/view a location.
+4. API fallback now keeps up to seven weather-day cards even when AQI coverage is shorter. Missing AQI is displayed as unavailable, never as zero.
+5. Forecast source badge and chart subtitle change dynamically between XGBoost and Open-Meteo API.
+6. Weather daily summary no longer fills missing temperatures/rain probability with made-up defaults.
+7. Daily cards use the viewer's local calendar date labels rather than showing the prior UTC date.
+8. City training now trains only AQI and PM2.5 models. Weather forecast comes directly from Open-Meteo, so six unnecessary weather-model training jobs are skipped.
+9. Duplicate training requests for the same city are rejected while training is active.
+10. Added an automated regression test for 7 weather days with missing AQI values.
+11. Added docs/MODEL_ACCURACY_REVIEW.md with current city-wise and 168-hour holdout metrics.
+
+Validation performed in the build environment:
+- npm test: PASS
+- node --check for server and changed JS modules: PASS
+- Python py_compile for predict.py, train_model.py and fetch_data.py: PASS
+- Server /api/health smoke test: PASS
+
+Important:
+- Existing trained model files are included and preserved, including Pune.
+- New/untrained locations use provider forecasts, not an invented global ML model.
+- Open-Meteo AQI coverage can be shorter than seven days depending on its model/region. The UI shows the available AQI days and labels missing AQI as unavailable while retaining the weather forecast days.
+- This package does not claim to have retrained or improved the existing XGBoost models. It records their measured holdout performance and prepares the pipeline for validation-led model experiments.

@@ -1,0 +1,175 @@
+{
+  "model_version": 5,
+  "city": "vadodara",
+  "trained_at": "2026-11-21T08:38:10Z",
+  "model_type": "Horizon-calibrated XGBoost (reg:absoluteerror)",
+  "target_source": "Open-Meteo Air Quality API",
+  "aqi": {
+    "mae": 13.473,
+    "rmse": 20.043,
+    "r2": 0.5605,
+    "direction_accuracy_percent": 66.0,
+    "persistence_mae": 16.366,
+    "n": 16837
+  },
+  "pm25": {
+    "mae": 9.374,
+    "rmse": 13.355,
+    "r2": 0.4596,
+    "direction_accuracy_percent": 70.62,
+    "persistence_mae": 12.018,
+    "n": 16837
+  },
+  "weather_forecast_source": "Open-Meteo Weather Forecast API (no separate local weather models)",
+  "horizon_metrics": {
+    "1": {
+      "mae": 1.682,
+      "rmse": 3.923,
+      "r2": 0.9828,
+      "direction_accuracy_percent": 41.02,
+      "persistence_mae": 1.682,
+      "n": 2160
+    },
+    "6": {
+      "mae": 5.831,
+      "rmse": 9.369,
+      "r2": 0.9021,
+      "direction_accuracy_percent": 60.56,
+      "persistence_mae": 6.334,
+      "n": 2155
+    },
+    "12": {
+      "mae": 7.999,
+      "rmse": 11.081,
+      "r2": 0.8632,
+      "direction_accuracy_percent": 63.8,
+      "persistence_mae": 9.05,
+      "n": 2149
+    },
+    "24": {
+      "mae": 11.504,
+      "rmse": 14.98,
+      "r2": 0.7511,
+      "direction_accuracy_percent": 65.18,
+      "persistence_mae": 12.775,
+      "n": 2137
+    },
+    "48": {
+      "mae": 16.676,
+      "rmse": 21.745,
+      "r2": 0.4807,
+      "direction_accuracy_percent": 68.67,
+      "persistence_mae": 19.837,
+      "n": 2113
+    },
+    "72": {
+      "mae": 19.538,
+      "rmse": 25.267,
+      "r2": 0.3066,
+      "direction_accuracy_percent": 73.86,
+      "persistence_mae": 24.36,
+      "n": 2089
+    },
+    "120": {
+      "mae": 22.007,
+      "rmse": 28.349,
+      "r2": 0.1459,
+      "direction_accuracy_percent": 76.38,
+      "persistence_mae": 27.91,
+      "n": 2041
+    },
+    "168": {
+      "mae": 24.04,
+      "rmse": 30.261,
+      "r2": 0.0369,
+      "direction_accuracy_percent": 80.53,
+      "persistence_mae": 30.984,
+      "n": 1993
+    }
+  },
+  "validation_method": "Chronological train/validation/test split; 90-day validation and test windows with 168-hour purge; no random split",
+  "train_pair_count": 554238,
+  "test_pair_count": 16837,
+  "feature_importance": [
+    {
+      "feature": "us_aqi_lag1",
+      "importance": 0.081643
+    },
+    {
+      "feature": "precipitation_roll72_std",
+      "importance": 0.050824
+    },
+    {
+      "feature": "temperature_2m_roll24_mean",
+      "importance": 0.031272
+    },
+    {
+      "feature": "us_aqi_lag0",
+      "importance": 0.030605
+    },
+    {
+      "feature": "us_aqi_roll6_mean",
+      "importance": 0.028455
+    },
+    {
+      "feature": "surface_pressure",
+      "importance": 0.027411
+    },
+    {
+      "feature": "temperature_2m_roll72_mean",
+      "importance": 0.026797
+    },
+    {
+      "feature": "surface_pressure_lag1",
+      "importance": 0.024911
+    },
+    {
+      "feature": "us_aqi_lag6",
+      "importance": 0.024018
+    },
+    {
+      "feature": "temperature_2m_roll24_std",
+      "importance": 0.020747
+    },
+    {
+      "feature": "forecast_horizon_hours",
+      "importance": 0.020544
+    },
+    {
+      "feature": "year_day_cos",
+      "importance": 0.020476
+    },
+    {
+      "feature": "us_aqi_lag3",
+      "importance": 0.019513
+    },
+    {
+      "feature": "relative_humidity_2m_roll24_std",
+      "importance": 0.018246
+    },
+    {
+      "feature": "us_aqi_lag2",
+      "importance": 0.017822
+    },
+    {
+      "feature": "pm2_5_trend_6h_24h",
+      "importance": 0.017651
+    },
+    {
+      "feature": "temperature_2m_roll72_std",
+      "importance": 0.017462
+    },
+    {
+      "feature": "surface_pressure_roll6_mean",
+      "importance": 0.016046
+    },
+    {
+      "feature": "relative_humidity_2m_roll72_std",
+      "importance": 0.015801
+    },
+    {
+      "feature": "year_day_sin",
+      "importance": 0.015021
+    }
+  ]
+}
